@@ -7,7 +7,6 @@ namespace FirstRepo
     {
         static void Main(string[] args)
         {
-
             Write("Введите числа\nx=");
             int x = Convert.ToInt32(ReadLine());
             Write("y=");
@@ -20,7 +19,6 @@ namespace FirstRepo
             Write("\nВведите число\nn="); x = Convert.ToInt32(ReadLine());
             Action<int> action = F1; action(x);
         }
-
         static void F1(int n)
         {
             Write(n + ' ');
