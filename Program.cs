@@ -5,8 +5,6 @@ namespace FirstRepo
 {
     class Program
     {
-        delegate int MyDelegate(int x, int y);
-        delegate void MyDelegate2(int n);
         static void Main(string[] args)
         {
 
@@ -14,11 +12,11 @@ namespace FirstRepo
             int x = Convert.ToInt32(ReadLine());
             Write("y=");
             int y = Convert.ToInt32(ReadLine());
-            MyDelegate myDelegate = Mult;
-            myDelegate += Sum;
-            WriteLine($"Сумма равна: {myDelegate(x, y)}");
-            myDelegate -= Sum;
-            WriteLine($"Произведение равно: {myDelegate(x, y)}");
+            Func<int, int, int> func=Mult;
+            func += Sum;
+            WriteLine($"Сумма равна: {func(x, y)}");
+            func -= Sum;
+            WriteLine($"Произведение равно: {func(x, y)}");
             Write("\nВведите число\nn="); x = Convert.ToInt32(ReadLine());
             Action<int> action = F1; action(x);
         }
