@@ -20,8 +20,7 @@ namespace FirstRepo
             myDelegate -= Sum;
             WriteLine($"Произведение равно: {myDelegate(x, y)}");
             Write("\nВведите число\nn="); x = Convert.ToInt32(ReadLine());
-            MyDelegate2 myDelegate2 = new MyDelegate2(F1);
-            myDelegate2.Invoke(x);
+            Action<int> action = F1; action(x);
         }
 
         static void F1(int n)
